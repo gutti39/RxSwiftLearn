@@ -138,6 +138,16 @@ import RxSwift
 //task.resume()
 
 
+var name1 = "veera"
+
+var chars = Set(name1)
+print(chars)
+print(String(chars))
+
+var marks = [23,24,25,21,19]
+var setmarks = Set(marks)
+print(setmarks)
+
 protocol MessageSending {
     func sendMessage(_ msg: String)
 }
