@@ -7,19 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8027A6D2683693E438F385F8 /* Pods_RxSwiftLearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68416BD7CF4A5CB51378C9A0 /* Pods_RxSwiftLearn.framework */; };
+		8E2A11A22B95687D0045BB88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A11A12B95687D0045BB88 /* ViewController.swift */; };
 		8E4E6C512B8C8CF000A8B49F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E6C502B8C8CF000A8B49F /* AppDelegate.swift */; };
 		8E4E6C532B8C8CF000A8B49F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E6C522B8C8CF000A8B49F /* SceneDelegate.swift */; };
-		8E4E6C552B8C8CF000A8B49F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E6C542B8C8CF000A8B49F /* ViewController.swift */; };
 		8E4E6C582B8C8CF000A8B49F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E6C562B8C8CF000A8B49F /* Main.storyboard */; };
 		8E4E6C5A2B8C8CF300A8B49F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E6C592B8C8CF300A8B49F /* Assets.xcassets */; };
 		8E4E6C5D2B8C8CF300A8B49F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E6C5B2B8C8CF300A8B49F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41D715004F22B76C30021233 /* Pods-RxSwiftLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLearn.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftLearn/Pods-RxSwiftLearn.release.xcconfig"; sourceTree = "<group>"; };
+		535B14E011D9DE0C99817687 /* Pods-RxSwiftLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLearn.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftLearn/Pods-RxSwiftLearn.debug.xcconfig"; sourceTree = "<group>"; };
+		68416BD7CF4A5CB51378C9A0 /* Pods_RxSwiftLearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftLearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2A11A12B95687D0045BB88 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../.Trash/RxSwiftLearn/ViewController.swift; sourceTree = "<group>"; };
+		8E2A11A32B956CAB0045BB88 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8E4E6C4D2B8C8CF000A8B49F /* RxSwiftLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4E6C502B8C8CF000A8B49F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E4E6C522B8C8CF000A8B49F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E4E6C542B8C8CF000A8B49F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E4E6C572B8C8CF000A8B49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E4E6C592B8C8CF300A8B49F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E4E6C5C2B8C8CF300A8B49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8027A6D2683693E438F385F8 /* Pods_RxSwiftLearn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DF7818272D004836A10AFF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68416BD7CF4A5CB51378C9A0 /* Pods_RxSwiftLearn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46A9ABA01CFD19DE676E7AC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				535B14E011D9DE0C99817687 /* Pods-RxSwiftLearn.debug.xcconfig */,
+				41D715004F22B76C30021233 /* Pods-RxSwiftLearn.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8E4E6C442B8C8CF000A8B49F = {
 			isa = PBXGroup;
 			children = (
 				8E4E6C4F2B8C8CF000A8B49F /* RxSwiftLearn */,
 				8E4E6C4E2B8C8CF000A8B49F /* Products */,
+				46A9ABA01CFD19DE676E7AC4 /* Pods */,
+				2DF7818272D004836A10AFF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +81,10 @@
 		8E4E6C4F2B8C8CF000A8B49F /* RxSwiftLearn */ = {
 			isa = PBXGroup;
 			children = (
+				8E2A11A32B956CAB0045BB88 /* MyPlayground.playground */,
 				8E4E6C502B8C8CF000A8B49F /* AppDelegate.swift */,
 				8E4E6C522B8C8CF000A8B49F /* SceneDelegate.swift */,
-				8E4E6C542B8C8CF000A8B49F /* ViewController.swift */,
+				8E2A11A12B95687D0045BB88 /* ViewController.swift */,
 				8E4E6C562B8C8CF000A8B49F /* Main.storyboard */,
 				8E4E6C592B8C8CF300A8B49F /* Assets.xcassets */,
 				8E4E6C5B2B8C8CF300A8B49F /* LaunchScreen.storyboard */,
@@ -74,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E4E6C612B8C8CF300A8B49F /* Build configuration list for PBXNativeTarget "RxSwiftLearn" */;
 			buildPhases = (
+				8A76F2D3D1E4E764FEE4D42E /* [CP] Check Pods Manifest.lock */,
 				8E4E6C492B8C8CF000A8B49F /* Sources */,
 				8E4E6C4A2B8C8CF000A8B49F /* Frameworks */,
 				8E4E6C4B2B8C8CF000A8B49F /* Resources */,
+				4E3EE31C1BCE2BD9B8AD6CBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +161,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E3EE31C1BCE2BD9B8AD6CBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSwiftLearn/Pods-RxSwiftLearn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxSwiftLearn/Pods-RxSwiftLearn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxSwiftLearn/Pods-RxSwiftLearn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A76F2D3D1E4E764FEE4D42E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxSwiftLearn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E4E6C492B8C8CF000A8B49F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E4E6C552B8C8CF000A8B49F /* ViewController.swift in Sources */,
 				8E4E6C512B8C8CF000A8B49F /* AppDelegate.swift in Sources */,
+				8E2A11A22B95687D0045BB88 /* ViewController.swift in Sources */,
 				8E4E6C532B8C8CF000A8B49F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,12 +357,14 @@
 		};
 		8E4E6C622B8C8CF300A8B49F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 535B14E011D9DE0C99817687 /* Pods-RxSwiftLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6W3W5M6963;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RxSwiftLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -315,12 +387,14 @@
 		};
 		8E4E6C632B8C8CF300A8B49F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41D715004F22B76C30021233 /* Pods-RxSwiftLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6W3W5M6963;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RxSwiftLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
