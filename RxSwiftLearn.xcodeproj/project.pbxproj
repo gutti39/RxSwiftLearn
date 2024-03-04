@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8027A6D2683693E438F385F8 /* Pods_RxSwiftLearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68416BD7CF4A5CB51378C9A0 /* Pods_RxSwiftLearn.framework */; };
-		8E2A11A22B95687D0045BB88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A11A12B95687D0045BB88 /* ViewController.swift */; };
+		8E2A11A62B9577B80045BB88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2A11A52B9577B80045BB88 /* ViewController.swift */; };
 		8E4E6C512B8C8CF000A8B49F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E6C502B8C8CF000A8B49F /* AppDelegate.swift */; };
 		8E4E6C532B8C8CF000A8B49F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E6C522B8C8CF000A8B49F /* SceneDelegate.swift */; };
 		8E4E6C582B8C8CF000A8B49F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E6C562B8C8CF000A8B49F /* Main.storyboard */; };
@@ -20,8 +20,9 @@
 		41D715004F22B76C30021233 /* Pods-RxSwiftLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLearn.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftLearn/Pods-RxSwiftLearn.release.xcconfig"; sourceTree = "<group>"; };
 		535B14E011D9DE0C99817687 /* Pods-RxSwiftLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLearn.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftLearn/Pods-RxSwiftLearn.debug.xcconfig"; sourceTree = "<group>"; };
 		68416BD7CF4A5CB51378C9A0 /* Pods_RxSwiftLearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftLearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E2A11A12B95687D0045BB88 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../.Trash/RxSwiftLearn/ViewController.swift; sourceTree = "<group>"; };
 		8E2A11A32B956CAB0045BB88 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8E2A11A42B956EB40045BB88 /* InterviewPrep.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = InterviewPrep.md; sourceTree = "<group>"; };
+		8E2A11A52B9577B80045BB88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E4E6C4D2B8C8CF000A8B49F /* RxSwiftLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4E6C502B8C8CF000A8B49F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E4E6C522B8C8CF000A8B49F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,11 +85,12 @@
 				8E2A11A32B956CAB0045BB88 /* MyPlayground.playground */,
 				8E4E6C502B8C8CF000A8B49F /* AppDelegate.swift */,
 				8E4E6C522B8C8CF000A8B49F /* SceneDelegate.swift */,
-				8E2A11A12B95687D0045BB88 /* ViewController.swift */,
+				8E2A11A52B9577B80045BB88 /* ViewController.swift */,
 				8E4E6C562B8C8CF000A8B49F /* Main.storyboard */,
 				8E4E6C592B8C8CF300A8B49F /* Assets.xcassets */,
 				8E4E6C5B2B8C8CF300A8B49F /* LaunchScreen.storyboard */,
 				8E4E6C5E2B8C8CF300A8B49F /* Info.plist */,
+				8E2A11A42B956EB40045BB88 /* InterviewPrep.md */,
 			);
 			path = RxSwiftLearn;
 			sourceTree = "<group>";
@@ -208,8 +210,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2A11A62B9577B80045BB88 /* ViewController.swift in Sources */,
 				8E4E6C512B8C8CF000A8B49F /* AppDelegate.swift in Sources */,
-				8E2A11A22B95687D0045BB88 /* ViewController.swift in Sources */,
 				8E4E6C532B8C8CF000A8B49F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
