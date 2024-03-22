@@ -138,47 +138,93 @@ import RxSwift
 //task.resume()
 
 
-var name1 = "veera"
+//var name1 = "veera"
+//
+//var chars = Set(name1)
+//print(chars)
+//print(String(chars))
+//
+//var marks = [23,24,25,21,19]
+//var setmarks = Set(marks)
+//print(setmarks)
+//
+//protocol MessageSending {
+//    func sendMessage(_ msg: String)
+//}
+//class EMailSender: MessageSending {
+//    func sendMessage(_ msg: String) {
+//        print(msg)
+//    }
+//}
+//class SMSSender: MessageSending {
+//    func sendMessage(_ msg: String) {
+//        print(msg)
+//    }
+//}
+//
+//class NotificationService {
+//    let sender: MessageSending
+//    
+//    init(sender: MessageSending) {
+//        self.sender = sender
+//    }
+//    
+//    func sendNotification(msg: String) {
+//        sender.sendMessage(msg)
+//    }
+//}
+//
+//let emailSender = EMailSender()
+//let smsSender = SMSSender()
+//
+//let emailNotification = NotificationService(sender: emailSender)
+//emailNotification.sendNotification(msg: "EMail")
+//
+//let smsNotification = NotificationService(sender: smsSender)
+//smsNotification.sendNotification(msg: "SMS")
 
-var chars = Set(name1)
-print(chars)
-print(String(chars))
+//func fibonacci(_ n: Int) -> Int {
+//    if n <= 1 {
+//        return n
+//    }
+//    return fibonacci(n-1) + fibonacci(n-2)
+//}
+//
+//let fibonacciResult = fibonacci(5)
+//print(fibonacciResult)
 
-var marks = [23,24,25,21,19]
-var setmarks = Set(marks)
-print(setmarks)
+//protocol Addable {
+//    static func +(lhs: Self, rhs: Self) -> Self
+//}
+//
+//extension Int: Addable{}
+//extension Double: Addable{}
+//extension String: Addable{}
+//
+//func addition<T:Addable>(param1: T, param2: T) -> T {
+//    return param1 + param2
+//}
+//
+//print(addition(param1: 1, param2: 2))
+//print(addition(param1: 4.5, param2: 2.3))
+//print(addition(param1: "Veera", param2: "Gutti"))
 
-protocol MessageSending {
-    func sendMessage(_ msg: String)
-}
-class EMailSender: MessageSending {
-    func sendMessage(_ msg: String) {
-        print(msg)
+import CommonCrypto
+
+func sha256(string: String) -> String {
+    if let data = string.data(using: .utf8) {
+        var digest = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+        data.withUnsafeBytes { bufferPointer in
+            _ = CC_SHA256(bufferPointer.baseAddress, CC_LONG(data.count), &digest)
+        }
+        let hexBytes = digest.map { String(format: "%02x", $0) }
+        return hexBytes.joined()
     }
-}
-class SMSSender: MessageSending {
-    func sendMessage(_ msg: String) {
-        print(msg)
-    }
+    return ""
 }
 
-class NotificationService {
-    let sender: MessageSending
-    
-    init(sender: MessageSending) {
-        self.sender = sender
-    }
-    
-    func sendNotification(msg: String) {
-        sender.sendMessage(msg)
-    }
-}
-
-let emailSender = EMailSender()
-let smsSender = SMSSender()
-
-let emailNotification = NotificationService(sender: emailSender)
-emailNotification.sendNotification(msg: "EMail")
-
-let smsNotification = NotificationService(sender: smsSender)
-smsNotification.sendNotification(msg: "SMS")
+// Example usage:
+let password = "sdfghjklkjhgfdsdswedrtyuio8765456789o87654edfvbnmjkjhytr4e35678ijhgfdfghfghjkiuytr434567890-=-0987654567uik"
+let hashedPassword = sha256(string: password)
+print("Hashed Password: \(hashedPassword)")
+"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855".count
