@@ -210,21 +210,31 @@ import RxSwift
 //print(addition(param1: "Veera", param2: "Gutti"))
 
 import CommonCrypto
+import CryptoKit
 
-func sha256(string: String) -> String {
-    if let data = string.data(using: .utf8) {
-        var digest = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
-        data.withUnsafeBytes { bufferPointer in
-            _ = CC_SHA256(bufferPointer.baseAddress, CC_LONG(data.count), &digest)
-        }
-        let hexBytes = digest.map { String(format: "%02x", $0) }
-        return hexBytes.joined()
-    }
-    return ""
+// Function to encrypt data using AES encryption
+func encryptData(data: Data, key: SymmetricKey) throws -> Data {
+    let encryptedData = (try AES.GCM.seal(data, using: key).combined)!
+    return encryptedData
 }
 
-// Example usage:
-let password = "sdfghjklkjhgfdsdswedrtyuio8765456789o87654edfvbnmjkjhytr4e35678ijhgfdfghfghjkiuytr434567890-=-0987654567uik"
-let hashedPassword = sha256(string: password)
-print("Hashed Password: \(hashedPassword)")
-"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855".count
+// Function to decrypt data using AES encryption
+func decryptData(encryptedData: Data, key: SymmetricKey) throws -> Data {
+    let sealedBox = try AES.GCM.SealedBox(combined: encryptedData)
+    let decryptedData = try AES.GCM.open(sealedBox, using: key)
+    return decryptedData
+}
+
+// Example usage
+let plaintext = "Hello, World!".data(using: .utf8)!
+let key = SymmetricKey(size: .bits256)
+do {
+    let encryptedData = try encryptData(data: plaintext, key: key)
+    print("Encrypted data: \(encryptedData.base64EncodedString())")
+    
+    let decryptedData = try decryptData(encryptedData: encryptedData, key: key)
+    let decryptedText = String(data: decryptedData, encoding: .utf8)!
+    print("Decrypted text: \(decryptedText)")
+} catch {
+    print("Error: \(error)")
+}
