@@ -14,6 +14,7 @@
 		8E4E6C582B8C8CF000A8B49F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E6C562B8C8CF000A8B49F /* Main.storyboard */; };
 		8E4E6C5A2B8C8CF300A8B49F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E6C592B8C8CF300A8B49F /* Assets.xcassets */; };
 		8E4E6C5D2B8C8CF300A8B49F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E6C5B2B8C8CF300A8B49F /* LaunchScreen.storyboard */; };
+		8ECC5FFA2BAE722200738FB1 /* EncryptDecryptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECC5FF92BAE722200738FB1 /* EncryptDecryptController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8E4E6C592B8C8CF300A8B49F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E4E6C5C2B8C8CF300A8B49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E4E6C5E2B8C8CF300A8B49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ECC5FF92BAE722200738FB1 /* EncryptDecryptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptDecryptController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				8E4E6C5B2B8C8CF300A8B49F /* LaunchScreen.storyboard */,
 				8E4E6C5E2B8C8CF300A8B49F /* Info.plist */,
 				8E2A11A42B956EB40045BB88 /* InterviewPrep.md */,
+				8ECC5FF92BAE722200738FB1 /* EncryptDecryptController.swift */,
 			);
 			path = RxSwiftLearn;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E2A11A62B9577B80045BB88 /* ViewController.swift in Sources */,
+				8ECC5FFA2BAE722200738FB1 /* EncryptDecryptController.swift in Sources */,
 				8E4E6C512B8C8CF000A8B49F /* AppDelegate.swift in Sources */,
 				8E4E6C532B8C8CF000A8B49F /* SceneDelegate.swift in Sources */,
 			);
