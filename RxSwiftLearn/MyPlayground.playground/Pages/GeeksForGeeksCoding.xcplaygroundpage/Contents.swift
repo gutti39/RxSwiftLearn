@@ -209,32 +209,84 @@ import RxSwift
 //print(addition(param1: 4.5, param2: 2.3))
 //print(addition(param1: "Veera", param2: "Gutti"))
 
-import CommonCrypto
-import CryptoKit
+//import CommonCrypto
+//import CryptoKit
+//
+//// Function to encrypt data using AES encryption
+//func encryptData(data: Data, key: SymmetricKey) throws -> Data {
+//    let encryptedData = (try AES.GCM.seal(data, using: key).combined)!
+//    return encryptedData
+//}
+//
+//// Function to decrypt data using AES encryption
+//func decryptData(encryptedData: Data, key: SymmetricKey) throws -> Data {
+//    let sealedBox = try AES.GCM.SealedBox(combined: encryptedData)
+//    let decryptedData = try AES.GCM.open(sealedBox, using: key)
+//    return decryptedData
+//}
+//
+//// Example usage
+//let plaintext = "Hello, World!".data(using: .utf8)!
+//let key = SymmetricKey(size: .bits256)
+//do {
+//    let encryptedData = try encryptData(data: plaintext, key: key)
+//    print("Encrypted data: \(encryptedData.base64EncodedString())")
+//    
+//    let decryptedData = try decryptData(encryptedData: encryptedData, key: key)
+//    let decryptedText = String(data: decryptedData, encoding: .utf8)!
+//    print("Decrypted text: \(decryptedText)")
+//} catch {
+//    print("Error: \(error)")
+//}
 
-// Function to encrypt data using AES encryption
-func encryptData(data: Data, key: SymmetricKey) throws -> Data {
-    let encryptedData = (try AES.GCM.seal(data, using: key).combined)!
-    return encryptedData
-}
+//How many ways can you make change with coins and a total amount
+//Suppose we have coin denominations of [1, 2, 5] and the total amount is 7. We can make changes in the following 6 ways:
+//func changePossibilities(_ amount: Int, _ coins: [Int]) -> Int {
+//    var dp = [Int](repeating: 0, count: amount + 1)
+//    dp[0] = 1
+//    
+//    for coin in coins {
+//        for i in coin...amount {
+//            print(coin, i)
+//            dp[i] = dp[i] + dp[i - coin]
+//        }
+//    }
+//    print("###############")
+//    for i in 0..<dp.count {
+//        print(dp[i])
+//    }
+//    return dp[amount]
+//}
+//
+//// Example usage
+//let coins = [1,5, 6, 9]
+//let totalAmount = 8
+//
+//let possibilities = changePossibilities(totalAmount, coins)
+//print("Number of ways to make change: \(possibilities)") // Output: Number of ways to make change: 6
 
-// Function to decrypt data using AES encryption
-func decryptData(encryptedData: Data, key: SymmetricKey) throws -> Data {
-    let sealedBox = try AES.GCM.SealedBox(combined: encryptedData)
-    let decryptedData = try AES.GCM.open(sealedBox, using: key)
-    return decryptedData
-}
+//a function that calculates the minimum number of elements required to sum up to a given total, you can achieve that using dynamic programming. Here's a Swift implementation:
 
-// Example usage
-let plaintext = "Hello, World!".data(using: .utf8)!
-let key = SymmetricKey(size: .bits256)
-do {
-    let encryptedData = try encryptData(data: plaintext, key: key)
-    print("Encrypted data: \(encryptedData.base64EncodedString())")
+func minNumbersForTotal(total: Int, numbers: [Int]) -> Int? {
+    var dp = Array(repeating: Int.max - 1, count: total + 1)
+    dp[0] = 0
     
-    let decryptedData = try decryptData(encryptedData: encryptedData, key: key)
-    let decryptedText = String(data: decryptedData, encoding: .utf8)!
-    print("Decrypted text: \(decryptedText)")
-} catch {
-    print("Error: \(error)")
+    for i in 1...total {
+        for num in numbers {
+            if num <= i {
+                dp[i] = min(dp[i], dp[i - num] + 1)
+            }
+        }
+    }
+    
+    return dp[total] == Int.max - 1 ? nil : dp[total]
+}
+
+// Example usage:
+let numbers = [1, 3, 4]
+let total = 7
+if let minCount = minNumbersForTotal(total: total, numbers: numbers) {
+    print("Minimum number of elements required to sum up to \(total) is \(minCount)")
+} else {
+    print("It's not possible to form \(total) using the given numbers.")
 }
