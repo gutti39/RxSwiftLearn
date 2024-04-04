@@ -267,26 +267,131 @@ import RxSwift
 
 //a function that calculates the minimum number of elements required to sum up to a given total, you can achieve that using dynamic programming. Here's a Swift implementation:
 
-func minNumbersForTotal(total: Int, numbers: [Int]) -> Int? {
-    var dp = Array(repeating: Int.max - 1, count: total + 1)
-    dp[0] = 0
+//func minNumbersForTotal(total: Int, numbers: [Int]) -> Int? {
+//    var dp = Array(repeating: Int.max - 1, count: total + 1)
+//    dp[0] = 0
+//    
+//    for i in 1...total {
+//        for num in numbers {
+//            if num <= i {
+//                dp[i] = min(dp[i], dp[i - num] + 1)
+//            }
+//        }
+//    }
+//    
+//    return dp[total] == Int.max - 1 ? nil : dp[total]
+//}
+//
+//// Example usage:
+//let numbers = [1, 3, 4]
+//let total = 7
+//if let minCount = minNumbersForTotal(total: total, numbers: numbers) {
+//    print("Minimum number of elements required to sum up to \(total) is \(minCount)")
+//} else {
+//    print("It's not possible to form \(total) using the given numbers.")
+//}
+//
+//// Binary search
+//func binarySearch(_ array: [Int], key: Int) -> Int? {
+//    var lowerBound = 0
+//    var upperBound = array.count - 1
+//
+//    while lowerBound <= upperBound {
+//        let midIndex = lowerBound + (upperBound - lowerBound) / 2
+//        let midValue = array[midIndex]
+//
+//        if midValue == key {
+//            return midIndex
+//        } else if midValue < key {
+//            lowerBound = midIndex + 1
+//        } else {
+//            upperBound = midIndex - 1
+//        }
+//    }
+//
+//    return nil
+//}
+//
+//// Example usage:
+//let array = [1, 3, 5, 7, 9, 11, 13, 15, 17]
+//if let index = binarySearch(array, key: 17) {
+//    print("Element found at index: \(index)")
+//} else {
+//    print("Element not found")
+//}
+//
+////Given an array Arr consisting of N distinct integers. The task is to count all the triplets such that sum of two elements equals the third element.
+//
+//func countTriplets(_ arr: [Int]) -> Int {
+//    var count = 0
+//    let sortedArr = arr.sorted() // Sort the array for efficient binary search
+//    
+//    for i in 0..<sortedArr.count - 1 {
+//        for j in i+1..<sortedArr.count {
+//            let sum = sortedArr[i] + sortedArr[j]
+//            if binarySearch(sortedArr, key: sum) {
+//                count += 1
+//            }
+//        }
+//    }
+//    
+//    return count
+//}
+//
+//func binarySearch(_ array: [Int], key: Int) -> Bool {
+//    var lowerBound = 0
+//    var upperBound = array.count - 1
+//    
+//    while lowerBound <= upperBound {
+//        let midIndex = lowerBound + (upperBound - lowerBound) / 2
+//        let midValue = array[midIndex]
+//        
+//        if midValue == key {
+//            return true
+//        } else if midValue < key {
+//            lowerBound = midIndex + 1
+//        } else {
+//            upperBound = midIndex - 1
+//        }
+//    }
+//    
+//    return false
+//}
+//
+//// Example usage:
+//let arr = [1, 2, 3, 4, 5]
+//let tripletCount = countTriplets(arr)
+//print("Number of triplets: \(tripletCount)") // Output: 3
+
+///To find the indexes of a subarray with a given sum, you can use a sliding window approach. Here's how you can implement it in Swift
+func subarrayIndexesWithSum(_ arr: [Int], _ targetSum: Int) -> (Int, Int)? {
+    var startIndex = 0
+    var currentSum = 0
     
-    for i in 1...total {
-        for num in numbers {
-            if num <= i {
-                dp[i] = min(dp[i], dp[i - num] + 1)
-            }
+    for endIndex in 0..<arr.count {
+        currentSum += arr[endIndex]
+        
+        // If the current sum exceeds the target sum, remove elements from the beginning of the subarray
+        while currentSum > targetSum && startIndex <= endIndex {
+            currentSum -= arr[startIndex]
+            startIndex += 1
+        }
+        
+        // If the current sum equals the target sum, return the indexes of the subarray
+        if currentSum == targetSum {
+            return (startIndex, endIndex)
         }
     }
     
-    return dp[total] == Int.max - 1 ? nil : dp[total]
+    // If no subarray with the target sum is found, return nil
+    return nil
 }
 
 // Example usage:
-let numbers = [1, 3, 4]
-let total = 7
-if let minCount = minNumbersForTotal(total: total, numbers: numbers) {
-    print("Minimum number of elements required to sum up to \(total) is \(minCount)")
+let arr = [1, 4, 20, 3, 10, 5]
+let targetSum = 33
+if let indexes = subarrayIndexesWithSum(arr, targetSum) {
+    print("Indexes of subarray with sum \(targetSum): \(indexes)")
 } else {
-    print("It's not possible to form \(total) using the given numbers.")
+    print("No subarray found with sum \(targetSum)")
 }
