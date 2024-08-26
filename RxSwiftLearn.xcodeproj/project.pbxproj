@@ -21,7 +21,6 @@
 		41D715004F22B76C30021233 /* Pods-RxSwiftLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLearn.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftLearn/Pods-RxSwiftLearn.release.xcconfig"; sourceTree = "<group>"; };
 		535B14E011D9DE0C99817687 /* Pods-RxSwiftLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLearn.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftLearn/Pods-RxSwiftLearn.debug.xcconfig"; sourceTree = "<group>"; };
 		68416BD7CF4A5CB51378C9A0 /* Pods_RxSwiftLearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftLearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E2A11A32B956CAB0045BB88 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8E2A11A42B956EB40045BB88 /* InterviewPrep.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = InterviewPrep.md; sourceTree = "<group>"; };
 		8E2A11A52B9577B80045BB88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E4E6C4D2B8C8CF000A8B49F /* RxSwiftLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +30,7 @@
 		8E4E6C592B8C8CF300A8B49F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E4E6C5C2B8C8CF300A8B49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E4E6C5E2B8C8CF300A8B49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E9710A32C7B77890032BE16 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		8ECC5FF92BAE722200738FB1 /* EncryptDecryptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptDecryptController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +84,7 @@
 		8E4E6C4F2B8C8CF000A8B49F /* RxSwiftLearn */ = {
 			isa = PBXGroup;
 			children = (
-				8E2A11A32B956CAB0045BB88 /* MyPlayground.playground */,
+				8E9710A32C7B77890032BE16 /* MyPlayground.playground */,
 				8E4E6C502B8C8CF000A8B49F /* AppDelegate.swift */,
 				8E4E6C522B8C8CF000A8B49F /* SceneDelegate.swift */,
 				8E2A11A52B9577B80045BB88 /* ViewController.swift */,

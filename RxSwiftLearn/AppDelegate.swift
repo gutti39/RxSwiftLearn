@@ -13,7 +13,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Enable adjustsFontSizeToFitWidth and adjustsFontForContentSizeCategory for UILabel
+        UILabel.appearance().adjustsFontSizeToFitWidth = true
+        UILabel.appearance().adjustsFontForContentSizeCategory = true
+
+        // Enable adjustsFontSizeToFitWidth and adjustsFontForContentSizeCategory for UIButton
+        UIButton.appearance().titleLabel?.adjustsFontSizeToFitWidth = true
+        UIButton.appearance().titleLabel?.adjustsFontForContentSizeCategory = true
+
+        // Enable adjustsFontSizeToFitWidth and adjustsFontForContentSizeCategory for UITextField
+        UITextField.appearance().adjustsFontSizeToFitWidth = true
+        UITextField.appearance().adjustsFontForContentSizeCategory = true
+
+        // Enable adjustsFontForContentSizeCategory for UITextView
+        UITextView.appearance().adjustsFontForContentSizeCategory = true
+
+        // iOS 15 or later: Set maximum and minimum content size categories for UILabel, UIButton, UITextField, and UITextView
+        if #available(iOS 15.0, *) {
+            UILabel.appearance().maximumContentSizeCategory = .accessibilityLarge
+            UILabel.appearance().minimumContentSizeCategory = .large
+            
+            UIButton.appearance().maximumContentSizeCategory = .accessibilityLarge
+            UIButton.appearance().minimumContentSizeCategory = .large
+            
+            UITextField.appearance().maximumContentSizeCategory = .accessibilityLarge
+            UITextField.appearance().minimumContentSizeCategory = .large
+            
+            UITextView.appearance().maximumContentSizeCategory = .accessibilityLarge
+            UITextView.appearance().minimumContentSizeCategory = .large
+        } else {
+            // Fallback on earlier versions
+        }
         return true
     }
 
