@@ -103,7 +103,7 @@ for i in 0...10 {
 var age = [23,11,2,45,65,33,23,9,90,76,62]
 var tempAge: Int
 for i in 0..<age.count {
-    for j in i+1..<age.count {
+    for j in i+1..<age.count {// this is nothing bubble sort
         if age[i] > age[j] {
             tempAge = age[i]
             age[i] = age[j]

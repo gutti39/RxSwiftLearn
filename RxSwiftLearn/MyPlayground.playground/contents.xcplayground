@@ -3,5 +3,6 @@
     <pages>
         <page name='Interview Coding'/>
         <page name='GeeksForGeeksCoding'/>
+        <page name='Just temp playground'/>
     </pages>
 </playground>
